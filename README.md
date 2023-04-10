@@ -22,7 +22,7 @@
 
 给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
 
-#### 两个任务分别在特定领域和开放领域两种设定下评估：
+两个任务分别在特定领域和开放领域两种设定下评估：
 
 - 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 
@@ -44,7 +44,7 @@
 
 - 输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
 
-###评估指标
+### 评估指标
 
 F1 score
 
