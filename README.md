@@ -12,45 +12,64 @@
 
 本届多领域多要素ABSA评测比赛包含2个子任务，任务内容覆盖Aspect-Sentiment二元组抽取和Aspect-Category-Opinion-Sentiment（ACOS）四元组抽取。本届比赛我们提供了一个多领域的英文数据集作为评测语料。
 
-### 任务描述
+Aspect-Sentiment二元组抽取：1）Aspect表示表达了观点的实体或属性片段； 2）Sentiment表示针对实体或属性的情感极性。
 
-#### 任务一：Aspect-Sentiment二元组抽取
+Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观点的实体或属性片段； 2）Category表示所关注实体或属性的预定义类别； 3）Opinion表示与实体或属性相关的情感表达片段； 4）Sentiment表示针对实体或属性的情感极性。特别地，隐式Aspect和隐式Opinion均用“NULL”来表示。
+
+数据集：我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
+
+以下是详细任务介绍。
+
+### 任务一、Aspect-Sentiment二元组抽取
 
 给定一个评论句子，参赛模型需抽取出当前句子中所有的Aspect-Sentiment二元组（即一体化属性抽取与属性情感分类），输出的二元组只需包含显式属性。
 
-#### 任务二：Aspect-Category-Opinion-Sentiment四元组抽取
+数据样例：
 
-给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
+输入：I have read a lot of Stuart McBride books and loved them.
 
-两个任务分别在特定领域和开放领域两种设定下评估：
+输出：(Stuart McBride books-Positive)
+
+输入：The material feels nice but Amazon has up the wrong size chart!	
+
+输出：(material-Positive), (size chart-Negative)
+
+输入：This is a super fast computer and I really like it.
+
+输出：(computer-Positive)
+
+评价指标：F1 score（预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配）。
+
+该任务分别在特定领域和开放领域两种设定下评估：
 
 - 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 
 - 在开放领域设定下，仅能建立一个模型，利用该模型在所有领域的测试数据上进行预测。允许使用所有领域的训练数据，也允许使用包括ChatGPT在内的外部资源。
 
-### 数据集描述
+### 任务二、Aspect-Category-Opinion-Sentiment四元组抽取
 
-我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
+给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
 
-任务一的数据样例如下：
+数据样例：
 
-- 输入：The material feels nice but Amazon has up the wrong size chart!	
+输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
 
-- 输出：(material-Positive), (size chart-Negative)
+输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
 
-任务二的数据样例如下：
+输入：The food is great, migas are the best in the city!	
 
-- 输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+输出：(food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
 
-- 输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
+输入：Highly recommended for a brief business trip or a leisure stay with your best friend.	
 
-### 评估指标
+输出：(NULL-Hotel#General-Highly recommended-Positive)
 
-F1 score
+评价指标： F1 score（预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同）。
 
-任务一：预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配。
+任务二分为特定领域、开放领域两种设定：
 
-任务二：预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同。
+- 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
+- 在开放领域设定下，仅能建立一个模型，利用该模型在所有领域的测试数据上进行预测。允许使用所有领域的训练数据，也允许使用包括ChatGPT在内的外部资源。
 
 ## 报名网站
 
