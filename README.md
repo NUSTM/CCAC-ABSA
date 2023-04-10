@@ -24,7 +24,7 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 给定一个评论句子，参赛模型需抽取出当前句子中所有的Aspect-Sentiment二元组（即一体化属性抽取与属性情感分类），输出的二元组只需包含显式属性。
 
-数据样例：
+#### 数据样例：
 
 输入：I have read a lot of Stuart McBride books and loved them.
 
@@ -38,7 +38,9 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 输出：(computer-Positive)
 
-评价指标：F1 score（预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配）。
+#### 评价指标：
+
+F1 score（预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配）。
 
 该任务分别在特定领域和开放领域两种设定下评估：
 
@@ -50,7 +52,7 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
 
-数据样例：
+#### 数据样例：
 
 输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
 
@@ -64,7 +66,9 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 输出：(NULL-Hotel#General-Highly recommended-Positive)
 
-评价指标： F1 score（预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同）。
+#### 评价指标：
+
+F1 score（预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同）。
 
 任务二分为特定领域、开放领域两种设定：
 
