@@ -22,7 +22,7 @@
 
 给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
 
-两个任务分别在特定领域和开放领域两种设定下评估：
+#### 两个任务分别在特定领域和开放领域两种设定下评估：
 
 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 
@@ -31,3 +31,84 @@
 ### 数据集描述
 
 我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
+
+任务一的数据样例如下：
+输入：I have read a lot of Stuart McBride books and loved them.
+输出：(Stuart McBride books-Positive)
+
+输入：The material feels nice but Amazon has up the wrong size chart!	
+输出：(material-Positive), (size chart-Negative)
+
+输入：This is a super fast computer and I really like it.
+输出：(computer-Positive)
+
+任务二的数据样例如下：
+
+输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
+
+输入：The food is great, migas are the best in the city!	
+输出：(food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
+
+输入：Highly recommended for a brief business trip or a leisure stay with your best friend.	
+输出：(NULL-Hotel#General-Highly recommended-Positive)
+
+
+###评估指标
+F1 score
+任务一：预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配。
+任务二：预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同。
+
+##报名网站
+
+https://docs.qq.com/form/page/DU2NJa3BsZWRkSVl0
+
+## 重要日期
+
+时区：GMT+08:00
+
+| 事项                 | 时间          |
+| -------------------- | ------------- |
+| 任务发布与报名启动   | 2023年4月10日 |
+| 训练集语料发布       | 2023年5月01日  |
+| 测试集语料发布       | 2023年6月12日  |
+| 提交截止（报名结束） | 2023年6月15日 |
+| 比赛结果公布         | 2022年6月22日 |
+
+## 评委会成员
+
+- 评测委员会成员：夏睿（南京理工大学）、虞剑飞（南京理工大学）、吴震（南京大学）、赵妍妍（哈尔滨工业大学）
+
+## 联系方式
+
+如有疑问，请致信评测会务组：蔡鸿杰hjcai@njust.edu.cn、宋楠 nsong@njust.edu.cn 
+
+## 参考资料与文献
+
+```
+@inproceedings{DBLP:conf/acl/CaiXY20,
+  author    = {Hongjie Cai and
+               Rui Xia and
+               Jianfei Yu},
+  editor    = {Chengqing Zong and
+               Fei Xia and
+               Wenjie Li and
+               Roberto Navigli},
+  title     = {Aspect-Category-Opinion-Sentiment Quadruple Extraction with Implicit
+               Aspects and Opinions},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational
+               Linguistics and the 11th International Joint Conference on Natural
+               Language Processing, {ACL/IJCNLP} 2021, (Volume 1: Long Papers), Virtual
+               Event, August 1-6, 2021},
+  pages     = {340--350},
+  publisher = {Association for Computational Linguistics},
+  year      = {2021},
+}
+```
+
+## 致谢
+
+- 主办方：中国中文信息学会情感计算专委会（筹）（CIPS-CCAC）
+
+- 承办方：南京理工大学文本挖掘实验室（NUSTM）、南京大学自然语言处理实验室（NJU-NLP）、哈尔滨工业大学赛尔实验室（HIT-SCIR）
+
