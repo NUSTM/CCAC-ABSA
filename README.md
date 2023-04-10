@@ -33,30 +33,40 @@
 我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
 
 任务一的数据样例如下：
+
 输入：I have read a lot of Stuart McBride books and loved them.
+
 输出：(Stuart McBride books-Positive)
 
 输入：The material feels nice but Amazon has up the wrong size chart!	
+
 输出：(material-Positive), (size chart-Negative)
 
 输入：This is a super fast computer and I really like it.
+
 输出：(computer-Positive)
 
 任务二的数据样例如下：
 
 输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+
 输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
 
 输入：The food is great, migas are the best in the city!	
+
 输出：(food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
 
 输入：Highly recommended for a brief business trip or a leisure stay with your best friend.	
+
 输出：(NULL-Hotel#General-Highly recommended-Positive)
 
 
 ###评估指标
+
 F1 score
+
 任务一：预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配。
+
 任务二：预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同。
 
 ##报名网站
