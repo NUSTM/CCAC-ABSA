@@ -24,42 +24,25 @@
 
 #### 两个任务分别在特定领域和开放领域两种设定下评估：
 
-在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
+- 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 
-在开放领域设定下，仅能建立一个模型，利用该模型在所有领域的测试数据上进行预测。允许使用所有领域的训练数据，也允许使用包括ChatGPT在内的外部资源。
+- 在开放领域设定下，仅能建立一个模型，利用该模型在所有领域的测试数据上进行预测。允许使用所有领域的训练数据，也允许使用包括ChatGPT在内的外部资源。
 
 ### 数据集描述
 
 我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
 
-任务一的数据样例如下：
-
-输入：I have read a lot of Stuart McBride books and loved them.
-
-输出：(Stuart McBride books-Positive)
+- 任务一的数据样例如下：
 
 输入：The material feels nice but Amazon has up the wrong size chart!	
 
 输出：(material-Positive), (size chart-Negative)
 
-输入：This is a super fast computer and I really like it.
-
-输出：(computer-Positive)
-
-任务二的数据样例如下：
+- 任务二的数据样例如下：
 
 输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
 
 输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
-
-输入：The food is great, migas are the best in the city!	
-
-输出：(food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
-
-输入：Highly recommended for a brief business trip or a leisure stay with your best friend.	
-
-输出：(NULL-Hotel#General-Highly recommended-Positive)
-
 
 ###评估指标
 
