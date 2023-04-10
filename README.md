@@ -32,17 +32,17 @@
 
 我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
 
-- 任务一的数据样例如下：
+任务一的数据样例如下：
 
-输入：The material feels nice but Amazon has up the wrong size chart!	
+- 输入：The material feels nice but Amazon has up the wrong size chart!	
 
-输出：(material-Positive), (size chart-Negative)
+- 输出：(material-Positive), (size chart-Negative)
 
-- 任务二的数据样例如下：
+任务二的数据样例如下：
 
-输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+- 输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
 
-输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
+- 输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
 
 ###评估指标
 
