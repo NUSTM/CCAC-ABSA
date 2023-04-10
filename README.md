@@ -42,7 +42,7 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 F1 score（预测出的二元组被视为正确的当且仅当它与真实标签的属性和相应的极性完全匹配）。
 
-该任务分别在特定领域和开放领域两种设定下评估：
+#### 该任务分别在特定领域和开放领域两种设定下评估：
 
 - 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 
@@ -70,7 +70,7 @@ F1 score（预测出的二元组被视为正确的当且仅当它与真实标签
 
 F1 score（预测出的四元组被视为正确的当且仅当它的四种要素及其组合与真实四元组中的完全相同）。
 
-任务二分为特定领域、开放领域两种设定：
+#### 任务二分为特定领域、开放领域两种设定：
 
 - 在特定领域设定下，基于各自领域的训练数据建立领域特定的模型，并在各自领域的测试数据上进行预测。模型构建不允许使用外部标注数据，仅可使用开源的预训练语言模型。
 - 在开放领域设定下，仅能建立一个模型，利用该模型在所有领域的测试数据上进行预测。允许使用所有领域的训练数据，也允许使用包括ChatGPT在内的外部资源。
@@ -101,26 +101,33 @@ https://docs.qq.com/form/page/DU2NJa3BsZWRkSVl0
 
 ## 参考资料与文献
 
-```
-@inproceedings{DBLP:conf/acl/CaiXY20,
-  author    = {Hongjie Cai and
-               Rui Xia and
-               Jianfei Yu},
-  editor    = {Chengqing Zong and
-               Fei Xia and
-               Wenjie Li and
-               Roberto Navigli},
-  title     = {Aspect-Category-Opinion-Sentiment Quadruple Extraction with Implicit
-               Aspects and Opinions},
-  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational
-               Linguistics and the 11th International Joint Conference on Natural
-               Language Processing, {ACL/IJCNLP} 2021, (Volume 1: Long Papers), Virtual
-               Event, August 1-6, 2021},
-  pages     = {340--350},
-  publisher = {Association for Computational Linguistics},
-  year      = {2021},
-}
-```
+[1]	Bing Liu. Sentiment analysis and opinion mining. Synthesis lectures on human language technologies, 2012.
+
+[2]	Hongjie Cai, Yaofeng Tu, Xiangsheng Zhou, Jianfei Yu, and Rui Xia. Aspect-category based sentiment analysis with hierarchical graph convolutional network. COLING 2020.
+
+[3]	Margaret Mitchell, Jacqui Aguilar, Theresa Wilson, Benjamin Van Durme. Open Domain Targeted Sentiment. EMNLP 2013.
+
+[4]	Minghao Hu, Yuxing Peng, Zhen Huang, Dongsheng Li and Yiwei Lv. Open-Domain Targeted Sentiment Analysis via Span-Based Extraction and Classification. ACL 2019.
+
+[5]	Jeremy Barnes, Robin Kurtz, Stephan Oepen, Lilja Øvrelid, Erik Velldal. Structured Sentiment Analysis as Dependency Graph Parsing. ACL 2021.
+
+[6]	Yifei Yang, Hai Zhao. Aspect-based Sentiment Analysis as Machine Reading Comprehension. COLING 2022.
+
+[7]	Hongjie Cai, Rui Xia, and Jianfei Yu. Aspect-category-opinion-sentiment quadruple extraction with implicit aspects and opinions. ACL 2021.
+
+[8]	Evgeny Kim and Roman Klinger. Who feels what and why? annotation of a literature corpus with semantic roles of emotions. COLING 2018.
+
+[9]	Xin Li, Lidong Bing, Piji Li, and Wai Lam. A unified model for opinion target extraction and target sentiment prediction. AAAI 2019.
+
+[10]	 Maria Pontiki, Dimitrios Galanis, Haris Papageorgiou, Ion Androutsopoulos, Suresh Manandhar, Mohammad Al-Smadi, Mahmoud Al-Ayyoub, Yanyan Zhao, Bing Qin, Orphée De Clercq, et al. Semeval2016 task 5: Aspect based sentiment analysis. In 10th International Workshop on Semantic Evaluation (SemEval 2016).
+
+[11]	 Maria Pontiki, Dimitrios Galanis, Harris Papageorgiou, Suresh Manandhar, and Ion Androutsopoulos. Semeval-2015 task 12: Aspect based sentiment analysis. In Proceedings of the 9th international workshop on semantic evaluation (SemEval 2015).
+
+[12]	 Maria Pontiki, Dimitris Galanis, John Pavlopoulos, Harris Papageorgiou, Ion Androutsopoulos, and Suresh Manandhar. SemEval-2014 task 4: Aspect based sentiment analysis. In Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014).
+
+[13]	 Wenxuan Zhang, Yang Deng, Xin Li, Yifei Yuan, Lidong Bing, and Wai Lam. Aspect sentiment quad prediction as paraphrase generation. EMNLP 2021.
+
+[14]	 Xiaoyi Bao, Wang Zhongqing, Xiaotong Jiang, Rong Xiao, Shoushan Li. Aspect-based Sentiment Analysis with Opinion Tree Generation. IJCAI 2022.
 
 ## 致谢
 
