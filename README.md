@@ -20,14 +20,14 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 我们从Amazon、Yelp、AirBnb等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。
 
-<p align="center">
-  
-|      领域      | **Books** | **Clothing** | **Hotel** | **Restaurant New** | **Laptop New** |
+<!-- |      领域      | **Books** | **Clothing** | **Hotel** | **Restaurant** | **Laptop** |
 | :------------: | :------------: | :--------------: |:--------------: |:--------------: |:--------------: |
 |      **标注句子数**      | 2967 | 2373 | 3526  | 5152 | 4076 |
 |**ACOS四元组数**| 4507 | 3416 | 6017  | 8496 | 5758 |
 
-表1. 数据集规模统计</p>
+<p align="center">表1. 数据集规模统计</p> -->
+
+![image](https://user-images.githubusercontent.com/84450259/231036321-6bd5fb04-0852-414e-9ef0-91e1cd25fb97.png){:height="20%" width="20%"}
 
 ### 任务一、Aspect-Sentiment二元组抽取
 
