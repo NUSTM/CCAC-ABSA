@@ -105,7 +105,7 @@ https://docs.qq.com/form/page/DU2NJa3BsZWRkSVl0
 
 如有疑问，请致信评测会务组：蔡鸿杰hjcai@njust.edu.cn、宋楠 nsong@njust.edu.cn 
 
-## 参考资料与文献
+## 参考文献
 
 [1]	Bing Liu. Sentiment analysis and opinion mining. Synthesis lectures on human language technologies, 2012.
 
@@ -137,7 +137,7 @@ https://docs.qq.com/form/page/DU2NJa3BsZWRkSVl0
 
 ## 致谢
 
-- 主办方：中国中文信息学会情感计算专委会（筹）（CIPS-CCAC）
+- 主办方：中国中文信息学会情感计算专委会（CIPS-CCAC）
 
 - 承办方：南京理工大学文本挖掘实验室（NUSTM）、南京大学自然语言处理实验室（NJU-NLP）、哈尔滨工业大学赛尔实验室（HIT-SCIR）
 
