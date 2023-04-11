@@ -68,7 +68,7 @@ Input: The food is great, migas are the best in the city!
 Output: (food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
 
 Input: Highly recommended for a brief business trip or a leisure stay with your best friend.	
-Output: (NULL-Hotel#General-Highly recommended-Positive)
+Output: (NULL-Hotel#General-Highly_recommended-Positive)
 ```
 
 #### 评价指标：
