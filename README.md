@@ -27,7 +27,7 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 <p align="center">表1. 数据集规模统计</p> -->
 
-![image](https://user-images.githubusercontent.com/84450259/231036321-6bd5fb04-0852-414e-9ef0-91e1cd25fb97.png){:height="20%" width="20%"}
+![image](https://user-images.githubusercontent.com/84450259/231036321-6bd5fb04-0852-414e-9ef0-91e1cd25fb97.png)
 
 ### 任务一、Aspect-Sentiment二元组抽取
 
