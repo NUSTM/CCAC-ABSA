@@ -27,17 +27,14 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 #### 数据样例：
 
 ```
-输入：I have read a lot of Stuart McBride books and loved them.
+Input: I have read a lot of Stuart McBride books and loved them.
+Output: (Stuart McBride books-Positive)
 
-输出：(Stuart McBride books-Positive)
+Input: The material feels nice but Amazon has up the wrong size chart!	
+Output: (material-Positive), (size chart-Negative)
 
-输入：The material feels nice but Amazon has up the wrong size chart!	
-
-输出：(material-Positive), (size chart-Negative)
-
-输入：This is a super fast computer and I really like it.
-
-输出：(computer-Positive)
+Input: This is a super fast computer and I really like it.
+Output: (computer-Positive)
 ```
 
 #### 评价指标：
@@ -57,17 +54,14 @@ F1 score（预测出的二元组被视为正确的当且仅当它与真实标签
 #### 数据样例：
 
 ```
-输入：Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+Input: Looks nice, and the surface is smooth, but certain apps take seconds to respond.
+Output: (NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
 
-输出：(NULL-Display#Design_features-nice-Positive), (surface-Laptop#Design_features-smooth-Positive), (apps-Software#General-NULL-Negative）
+Input: The food is great, migas are the best in the city!	
+Output: (food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
 
-输入：The food is great, migas are the best in the city!	
-
-输出：(food-Food#Quality-great-Positive), (migas-Food#Quality-best-Positive)
-
-输入：Highly recommended for a brief business trip or a leisure stay with your best friend.	
-
-输出：(NULL-Hotel#General-Highly recommended-Positive)
+Input: Highly recommended for a brief business trip or a leisure stay with your best friend.	
+Output: (NULL-Hotel#General-Highly recommended-Positive)
 ```
 
 #### 评价指标：
