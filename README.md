@@ -31,6 +31,8 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 表1. 数据集规模统计
 
+## 评测任务
+
 ### 任务一、Aspect-Sentiment二元组抽取
 
 给定一个评论句子，参赛模型需抽取出当前句子中所有的Aspect-Sentiment二元组（即一体化属性抽取与属性情感分类），输出的二元组只需包含显式属性。
