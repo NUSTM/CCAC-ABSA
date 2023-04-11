@@ -16,15 +16,17 @@ Aspect-Sentiment二元组抽取：1）Aspect表示表达了观点的实体或属
 
 Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观点的实体或属性片段； 2）Category表示所关注实体或属性的预定义类别； 3）Opinion表示与实体或属性相关的情感表达片段； 4）Sentiment表示针对实体或属性的情感极性。特别地，隐式Aspect和隐式Opinion均用“NULL”来表示。
 
-数据集：我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和ACOS四元组的标注，整理为json格式的文件。
+## 数据集
 
-以下是详细任务介绍。
+我们从AirBnb、Yelp等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。
+
+
 
 ### 任务一、Aspect-Sentiment二元组抽取
 
 给定一个评论句子，参赛模型需抽取出当前句子中所有的Aspect-Sentiment二元组（即一体化属性抽取与属性情感分类），输出的二元组只需包含显式属性。
 
-#### 数据样例：
+#### 示例：
 
 ```
 Input: I have read a lot of Stuart McBride books and loved them.
@@ -51,7 +53,7 @@ F1 score（预测出的二元组被视为正确的当且仅当它与真实标签
 
 给定一个评论句子，参赛模型须识别当前句子的所有Aspect-Category-Opinion-Sentiment (ACOS) 四元组[7]，输出的四元组包括显式和隐式的属性和观点。
 
-#### 数据样例：
+#### 示例：
 
 ```
 Input: Looks nice, and the surface is smooth, but certain apps take seconds to respond.
