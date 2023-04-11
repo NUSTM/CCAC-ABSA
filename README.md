@@ -18,7 +18,7 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 ## 数据集
 
-我们从Amazon、Yelp、AirBnb等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。
+我们从Amazon、Yelp、AirBnb等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment（AS）二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。
 
 <!-- |      领域      | **Books** | **Clothing** | **Hotel** | **Restaurant** | **Laptop** |
 | :------------: | :------------: | :--------------: |:--------------: |:--------------: |:--------------: |
@@ -27,13 +27,13 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 <p align="center">表1. 数据集规模统计</p> -->
 
-|      领域      | **标注句子数** | **Aspect** | **Category** | **Opinion** | **Sentiment** | **Aspect-Sentiment二元组数** |**ACOS四元组数** |
+|      领域      | **标注句子数** | **Aspect** | **Category** | **Opinion** | **Sentiment** | **AS二元组数** |**ACOS四元组数** |
 | :------------: | :------------: | :--------------: | :------------: | :--------------: | :------------: | :--------------: | :--------------: |
 |   **Books**    |      2967      |   3781    |   3593    |   4291   |   3781    |   3931    |   4507    |
 |  **Clothing**  |      2373      |       2843      |   2994    |   3341   |   2843   |   2904    |   3416    |
 |   **Hotel**    |      3526      |       4700      |   4886    |   5781  |   4700   |   4735|      6017    |
-| **Restaurant** |      5152      |       7056      |   6307    |   7958  |   7056   |   7250|   8496    |
-|   **Laptop**   |      4076      |      4958     |   4992    |   5378 |   4958   |   5035|   5758    |
+| **Restaurant New** |      5152      |       7056      |   6307    |   7958  |   7056   |   7250|   8496    |
+|   **Laptop New**   |      4076      |      4958     |   4992    |   5378 |   4958   |   5035|   5758    |
 |   **Total**   |      18094      |      23338     |   22772    |   26749 |   23338   |   23855|   28194    |
 
 <p align="center">表1. 数据集规模统计</p>
