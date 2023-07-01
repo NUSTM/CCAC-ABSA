@@ -1,4 +1,4 @@
-# CCAC2023多领域多要素属性级情感分析评测
+![image](https://github.com/NUSTM/CCAC-ABSA/assets/84450259/918c7374-da61-4b9f-a5be-15fcc5cae8fa)![image](https://github.com/NUSTM/CCAC-ABSA/assets/84450259/93b740c9-57a2-4f16-8a6b-b35c5b92145b)# CCAC2023多领域多要素属性级情感分析评测
 
 ## 背景
 
@@ -18,7 +18,8 @@ Aspect-Category-Opinion-Sentiment四元组抽取： 1）Aspect表示表达了观
 
 ## 数据集
 
-我们从Amazon、Yelp、AirBnb等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment（AS）二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。
+我们从Amazon、Yelp、AirBnb等公开网站上收集了五个领域（Book, Clothing, Hotel, Restaurant和 Laptop）的英文产品评论，由专业标注员进行了Aspect-Sentiment（AS）二元组和Aspect-Category-Opinion-Sentiment（ACOS）四元组的标注，整理为json格式的文件。标注规模如表1所示。同时，我们在arxiv上提交了一篇介绍本次比赛数据集的论文[[paper]](https://arxiv.org/abs/2306.16956)，欢迎大家关注。
+
 
 |      领域      | **标注句子** | **Aspect** | **Category** | **Opinion** | **Sentiment** | **AS二元组** |**ACOS四元组** |
 | :------------: | :------------: | :--------------: | :------------: | :--------------: | :------------: | :--------------: | :--------------: |
