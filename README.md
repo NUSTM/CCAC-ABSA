@@ -1,4 +1,4 @@
-![image](https://github.com/NUSTM/CCAC-ABSA/assets/84450259/918c7374-da61-4b9f-a5be-15fcc5cae8fa)![image](https://github.com/NUSTM/CCAC-ABSA/assets/84450259/93b740c9-57a2-4f16-8a6b-b35c5b92145b)# CCAC2023多领域多要素属性级情感分析评测
+# CCAC2023多领域多要素属性级情感分析评测
 
 ## 背景
 
